@@ -1,0 +1,21 @@
+def razbor(x, y):
+    boo = True
+    for i in range(y//2):
+        if x[i] == x[y - 1 - i]:
+            boo = True
+        else:
+            boo = False
+            break
+    return boo
+    
+
+class Solution:
+    def isPalindrome(self, x):
+        x = list(str(x))
+        dl = len(x)
+        return razbor(x, dl)
+        
+        """
+        :type x: int
+        :rtype: bool
+        """
